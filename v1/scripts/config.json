@@ -1,0 +1,28 @@
+{
+  "PortNum" : "57021",
+  "ssh_port": "5000",
+
+  "masterConfigs": {
+    "PortNum" : "57021",
+    "IP": "nerv2"
+  },
+
+  "execTimes" : [2, 2, 2],
+
+  "chunks" : 1,
+
+  "taskname_map" : {
+     "preprocess1"       : ["preprocess1", true],
+     "preprocess2"       : ["preprocess2", true],
+     "stitch"       	: ["stitch", true],
+     "car_detection"  	: ["car_detection/car_detection", true],
+     "human_detection"  : ["human_detection", true] },
+
+  "exec_profiler" : {
+     "preprocess1"       : true,
+     "preprocess2"       : true,
+     "stitch"       	: true,
+     "car_detection"  	: true,
+     "human_detection"  : true }
+
+}
