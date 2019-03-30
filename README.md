@@ -6,7 +6,9 @@ Image stitching and object detection application customized for Jupiter Orchestr
 # Image Stitching and Object Detection: Task Graph
 The application task graph, shown below, is intended for dispersed computing.
 
- ![alt tag](DAG.jpg)
+<div align=center><img width="150" height="150" src="https://github.com/ANRGUSC/Jupiter_image_stiching_app/blob/master/DAG.jpg"/></div>
+
+
 
 ## Generating the input files
 Single input file, two street view images, is given in a repository.
@@ -68,13 +70,17 @@ to an arbitrary directed graph.
 It can be done by running a Breadth First Search (BFS) type algorithm. 
 Then you get a graph something like: 
 
- ![alt tag](DAG.jpg)
+<div align=center><img width="150" height="150" src="https://github.com/ANRGUSC/Jupiter_image_stiching_app/blob/master/DAG.jpg"/></div>
 
 
 Now each of the non-leaf nodes and the leaf nodes that are part of original DAG
 part are represented in the configuration files as 
  ```
  <node-name>  <number for inputs required> <Flag stating whether to wait for all the inputs> <child1-name>  <child2-name> ....
+ ```
+For all the other nodes (i.e,  leaf nodes that are not part of the original DAG portion) such as `DFTslave00` represent them as 
+ ```
+ <node-name>    1       False   <node-name> 
  ```
 
 
@@ -93,17 +99,23 @@ SPLIT_ID (0 or 1, in our case) uniquely idenfifies the input image id. This scri
 An implementation of image stitching algorithm.
 
 ### `human_detection.py`
-Find the human targets in the stitched image.
+Find the human targets in the stitched image. Use two preprocessed images as inputs.
 
 ### `car_detection/car_detection.py`
-Find the car targets in the stiteched image.
+Find the car targets in the stitched image.
 
-### `car_detection/car_detection.py`
+### `car_detection/cars.xml`
 A trained classifier used to detecion cars.
  
 
 ## Execution
 This code is customized to be executed with Jupiter Only. 
+
+# References
+
+[1] [Python Multiple Image Stitching](https://github.com/kushalvyas/Python-Multiple-Image-Stitching)
+
+[2] [Car Detection with Opencv](http://www.technicdynamic.com/2017/08/28/python-motion-detection-with-opencv-simple/)
 
 
 # Acknowledgment
