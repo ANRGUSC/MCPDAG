@@ -6,7 +6,7 @@ Image stitching and object detection application customized for Jupiter Orchestr
 # Image Stitching and Object Detection: Task Graph
 The application task graph, shown below, is intended for dispersed computing.
 
-<div align=center><img width="150" height="150" src="https://github.com/ANRGUSC/Jupiter_image_stiching_app/blob/master/DAG.jpg"/></div>
+<div align=center><img width="600" height="600" src="https://github.com/ANRGUSC/Jupiter_image_stiching_app/blob/master/DAG.jpg"/></div>
 
 
 
@@ -70,7 +70,7 @@ to an arbitrary directed graph.
 It can be done by running a Breadth First Search (BFS) type algorithm. 
 Then you get a graph something like: 
 
-<div align=center><img width="150" height="150" src="https://github.com/ANRGUSC/Jupiter_image_stiching_app/blob/master/DAG.jpg"/></div>
+<div align=center><img width="600" height="600" src="https://github.com/ANRGUSC/Jupiter_image_stiching_app/blob/master/DAG.jpg"/></div>
 
 
 Now each of the non-leaf nodes and the leaf nodes that are part of original DAG
