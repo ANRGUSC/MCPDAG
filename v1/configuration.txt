@@ -1,8 +1,0 @@
-5
-preprocess1 1 false stitch
-preprocess2 1 false stitch
-stitch 2 true car_detection human_detection
-car_detection 1 true home
-human_detection 1 true home
-
-

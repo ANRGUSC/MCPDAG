@@ -1,1 +1,0 @@
-# Jupiter_image_stiching_app
