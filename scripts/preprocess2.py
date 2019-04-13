@@ -25,7 +25,8 @@ def task(onefile, pathin, pathout):
     for filename in filelist:
         # open the target jpeg 
         src = cv.imread(os.path.join(pathin, filename))
-        src = cv.cvtColor(src, cv.COLOR_BGR2GRAY)
+        #src = cv.cvtColor(src, cv.COLOR_BGR2GRAY)
+        src = cv.resize(src, (480, 320))
 
         # Histogram Equalization to improve the contrast of image
         #dst = cv.equalizeHist(src)

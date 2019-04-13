@@ -13,6 +13,7 @@ import cv2
 import time
 
 
+"""
 # merge two images and return the merged one
 def merge(i1, i2):
 
@@ -98,6 +99,7 @@ def getSURFFeatures(im, surf):
 
 
 
+
 def task(filelist, pathin, pathout):
 
 	#store the data&time info
@@ -114,6 +116,27 @@ def task(filelist, pathin, pathout):
     # merge two files into one
     merged = merge(image1, image2)
     cv2.imwrite(os.path.join(pathout,'merged_'+snapshot_time), merged)
+    return [os.path.join(pathout,'merged_'+snapshot_time)]
+
+"""
+
+def task(filelist, pathin, pathout):
+
+    snapshot_time = filelist[0].partition('_')[2]
+    time.sleep(5)	
+
+    image1_path = os.path.join(pathin, filelist[0])
+    image2_path = os.path.join(pathin, filelist[1])
+
+    image1 = cv2.imread(image1_path)
+    image2 = cv2.imread(image2_path)
+
+    s = cv2.Stitcher.create()
+
+    retval, pano = s.stitch([image1, image2])
+
+    cv2.imwrite(os.path.join(pathout,'merged_'+snapshot_time), pano)
+
     return [os.path.join(pathout,'merged_'+snapshot_time)]
 
 
