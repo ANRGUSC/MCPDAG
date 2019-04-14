@@ -12,6 +12,7 @@
   "chunks" : 1,
 
   "taskname_map" : {
+     "dummy"	:	["dummy", true],
      "preprocess1"       : ["preprocess1", true],
      "preprocess2"       : ["preprocess2", true],
      "stitch"       	: ["stitch", true],
@@ -19,6 +20,7 @@
      "human_detection"  : ["human_detection", true] },
 
   "exec_profiler" : {
+     "dummy"	:	true,
      "preprocess1"       : true,
      "preprocess2"       : true,
      "stitch"       	: true,
