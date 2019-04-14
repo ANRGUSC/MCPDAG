@@ -22,7 +22,7 @@ def task(onefile, pathin, pathout):
 
     #use trained cars XML classifiers
     car_cascade = cv2.CascadeClassifier('cars.xml')
-    
+    # ************* os.path.join(os.path.dirname(__file__),'cars.xml') ************
 
     # read the image
     image_path = os.path.join(pathin, onefile)

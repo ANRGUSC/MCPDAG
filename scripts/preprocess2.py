@@ -40,7 +40,7 @@ def task(onefile, pathin, pathout):
 
 
 def main():
-    filelist= 'camera2_20190222.jpeg'
+    filelist= 'input2_20190222.jpeg'
     outpath = os.path.join(os.path.dirname(__file__), "generated_files/")
     outfile = task(filelist, outpath, outpath)
     return outfile
@@ -48,7 +48,7 @@ def main():
 if __name__ == '__main__':
 
     #Suppose the file structure is apac/detection_app/camera1_input/camera1_20190222.jpeg
-    filelist= 'camera2_20190222.jpeg'
+    filelist= 'input2_20190222.jpeg'
     task(filelist, '/home/erick/detection_app/camera2_input', '/home/erick/detection_app')
 
 
