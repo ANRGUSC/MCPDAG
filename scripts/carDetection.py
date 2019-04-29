@@ -24,12 +24,25 @@ def task(onefile, pathin, pathout):
     #use trained cars XML classifiers
     car_cascade = cv2.CascadeClassifier('cars.xml')
     # ************* os.path.join(os.path.dirname(__file__),'cars.xml') ************
+ 
+    while True:
+        car_cascade = cv2.CascadeClassifier('cars.xml')
+        if car_cascade:
+            break
+ 
 
     # read the image
     image_path = os.path.join(pathin, onefile)
     print(image_path)
+    
+
     src = cv2.imread(image_path)
 
+    while(True):
+        src = cv2.imread(image_path)
+        if src:
+            break
+    
 
     #detect cars in the video
     cars = car_cascade.detectMultiScale(src, 1.1, 3)

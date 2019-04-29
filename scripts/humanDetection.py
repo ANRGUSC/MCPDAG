@@ -48,6 +48,10 @@ def task(onefile, pathin, pathout):
     image_path = os.path.join(pathin, onefile)
     img = cv2.imread(image_path)  
 
+    while(True):
+        img = cv2.imread(image_path)
+        if img:
+            break
 
     # use default detector
     hog = cv2.HOGDescriptor()
