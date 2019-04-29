@@ -6,5 +6,3 @@ stitch 2 true car_detection human_detection
 car_detection 1 true fusion
 human_detection 1 true fusion
 fusion 2 true home
-
-
