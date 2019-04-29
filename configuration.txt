@@ -1,9 +1,10 @@
-6
+7
 dummy 2 false preprocess1 preprocess2 
 preprocess1 1 true stitch
 preprocess2 1 true stitch
 stitch 2 true car_detection human_detection
-car_detection 1 true home
-human_detection 1 true home
+car_detection 1 true fusion
+human_detection 1 true fusion
+fusion 2 true home
 
 
