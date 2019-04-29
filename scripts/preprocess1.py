@@ -49,6 +49,6 @@ if __name__ == '__main__':
 
     #Suppose the file structure is erick/detection_app/camera1_input/camera1_20190222.jpeg
     filelist= 'input1_20190222.jpeg'
-    task(filelist, '/home/erick/detection_app/camera1_input', '/home/erick/detection_app')
+    task(filelist, '/home/erick/detection_app', '/home/erick/detection_app')
 
 

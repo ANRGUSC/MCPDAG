@@ -1,4 +1,11 @@
 {
+
+  "matrixConfigs": {
+    "dimension" : 4950,
+    "encoding" : [[1,0,1],
+                  [0,1,1]]
+  },
+
   "PortNum" : "57021",
   "ssh_port": "5000",
 
@@ -16,8 +23,9 @@
      "preprocess1"       : ["preprocess1", true],
      "preprocess2"       : ["preprocess2", true],
      "stitch"       	: ["stitch", true],
-     "car_detection"  	: ["car_detection/car_detection", true],
-     "human_detection"  : ["human_detection", true] },
+     "car_detection"  	: ["car_detection", true],
+     "human_detection"  : ["human_detection", true],
+     "fusion"           : ["fusion",true] },
 
   "exec_profiler" : {
      "dummy"	:	true,
@@ -25,6 +33,7 @@
      "preprocess2"       : true,
      "stitch"       	: true,
      "car_detection"  	: true,
-     "human_detection"  : true }
+     "human_detection"  : true,
+     "fusion"           : true }
 
 }

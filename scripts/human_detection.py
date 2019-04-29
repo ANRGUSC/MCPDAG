@@ -11,6 +11,7 @@ import numpy as np
 import time
 import os
 import cv2
+import csv
 
  
 
@@ -62,13 +63,15 @@ def task(onefile, pathin, pathout):
                 break
         else:
             found_filtered.append(r)
-    draw_detections(img, found_filtered, 3)
 
 
-    # store the drawn image
-    cv2.imwrite(os.path.join(pathout,'human_detected_'+snapshot_time), img)
+    with open(os.path.join(pathout,"human_"+snapshot_time.split(".")[0]+".csv"),"wt") as f:
+        cw = csv.writer(f)
+        for x, y, w, h in found_filtered:
+            cw.writerow([x,y,w,h])
 
-    return [os.path.join(pathout,'human_detected_'+snapshot_time)]
+
+    return [os.path.join(pathout,"human_"+snapshot_time.split(".")[0]+".csv")]
 
 
 
