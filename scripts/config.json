@@ -23,8 +23,8 @@
      "preprocess1"       : ["preprocess1", true],
      "preprocess2"       : ["preprocess2", true],
      "stitch"       	: ["stitch", true],
-     "car_detection"  	: ["car_detection", true],
-     "human_detection"  : ["human_detection", true],
+     "cardetection"  	: ["cardetection", true],
+     "humandetection"  : ["humandetection", true],
      "fusion"           : ["fusion",true] },
 
   "exec_profiler" : {
@@ -32,8 +32,8 @@
      "preprocess1"       : true,
      "preprocess2"       : true,
      "stitch"       	: true,
-     "car_detection"  	: true,
-     "human_detection"  : true,
+     "cardetection"  	: true,
+     "humandetection"  : true,
      "fusion"           : true }
 
 }

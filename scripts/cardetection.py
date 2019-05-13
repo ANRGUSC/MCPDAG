@@ -12,6 +12,7 @@ import numpy as np
 import time
 import os
 import csv
+from os import listdir
 
 def task(onefile, pathin, pathout):
 
@@ -22,8 +23,11 @@ def task(onefile, pathin, pathout):
 
 
     #use trained cars XML classifiers
-    car_cascade = cv2.CascadeClassifier('cars.xml')
+    xml_file = os.path.join(os.path.dirname(__file__),'cars.xml')
+    car_cascade = cv2.CascadeClassifier(xml_file)
+    # car_cascade = cv2.CascadeClassifier('cars.xml')
     # ************* os.path.join(os.path.dirname(__file__),'cars.xml') ************
+
 
     # read the image
     image_path = os.path.join(pathin, onefile)
